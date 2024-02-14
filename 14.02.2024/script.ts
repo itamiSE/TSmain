@@ -21,8 +21,8 @@
 class Point {
     x: number
     y: number
-    constructor(vall: number, val2: number) {
-        this.x = vall
+    constructor(val1: number, val2: number) {
+        this.x = val1
         this.y = val2
     }
 }
@@ -31,6 +31,10 @@ class Triangle {
     y: Point
     z: Point
     constructor(x1?: number, y1?: number, x2?: number, y2?: number, x3?: number, y3?: number) {
+        this.x = x1 && y1 ? new Point(x1, y1) : new Point(0, 0);
+        this.y = x2 && y2 ? new Point(x2, y2) : new Point(0, 0);
+        this.z = x3 && y3 ? new Point(x3, y3) : new Point(0, 0);
+
     }
 }
 
